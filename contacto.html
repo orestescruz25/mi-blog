@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Mi Blog</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: #f4f7f6; color: #333; }
+        header { background-color: #2c3e50; color: #fff; padding: 2rem; text-align: center; }
+        header h1 { margin: 0; font-size: 2.5rem; }
+        nav { background-color: #34495e; text-align: center; padding: 0.5rem; }
+        nav a { color: #fff; text-decoration: none; margin: 0 15px; font-weight: bold; }
+        nav a:hover { text-decoration: underline; }
+        .container { max-width: 600px; margin: 30px auto; padding: 0 20px; }
+        .content-box { background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        h2 { color: #2c3e50; }
+        
+        /* Estilos del Formulario */
+        form { display: flex; flex-direction: column; }
+        label { margin-top: 10px; font-weight: bold; }
+        input, textarea { padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px; font-family: inherit; }
+        button { background-color: #2c3e50; color: white; padding: 10px; border: none; border-radius: 4px; margin-top: 15px; cursor: pointer; font-size: 1rem; }
+        button:hover { background-color: #34495e; }
+        
+        footer { background-color: #2c3e50; color: #fff; text-align: center; padding: 1.5rem; margin-top: 40px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Contacto</h1>
+        <p>¿Tienes alguna duda o propuesta? ¡Escríbeme!</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="sobre-mi.html">Sobre mí / Biografía</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+
+    <div class="container">
+        <div class="content-box">
+            <h2>Envíame un mensaje</h2>
+            <!-- FORMULARIO -->
+			<!-- https://formspree.io -->
+			<form action="https://formspree.io/f/mwlvjake" method="POST"> 
+				
+				<label for="nombre">Nombre:</label>
+				<!-- El atributo name="name" es obligatorio para Formspree -->
+				<input type="text" id="nombre" name="name" placeholder="Tu nombre" required>
+
+				<label for="correo">Correo Electrónico:</label>
+				<!-- El atributo name="_replyto" le permite a Formspree responder directamente a ese correo -->
+				<input type="email" id="email" name="email" placeholder="tu-correo@dominio.com" required>
+
+				<label for="mensaje">Mensaje:</label>
+				<!-- El atributo name="message" es obligatorio para el cuerpo del mensaje -->
+				<textarea id="message" name="message" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+
+				<button type="submit">Enviar Mensaje</button>
+			</form>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Mi Blog Personal. Hecho con código puro.</p>
+    </footer>
+
+</body>
+</html>
